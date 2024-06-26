@@ -121,7 +121,7 @@ nav .navbar-toggler .nav-icon::after {
 #banner .black h1 {
     position: relative;
     top: 40%;
-    color: #CCC;
+    color: #FFF;
     margin-left: 3%;
 }
 
@@ -154,7 +154,7 @@ nav .navbar-toggler .nav-icon::after {
     color: #FFF;
     border: 2px solid #CCC;
     padding: 3px 10px;
-    border-radius: 14px;
+    border-radius: 24px;
     background-color: #b0b0b034;
     backdrop-filter: blur(20px);
 }
@@ -259,8 +259,123 @@ nav .navbar-toggler .nav-icon::after {
     margin: 0;
 }
 
+/* Movies */
+#movies-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quality {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f1f1f;
+    color: #FFF;
+    padding: 5px 20px;
+    font-weight: 500;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.movies-heading h2 {
+    font-weight: 400;
+    margin: 0;
+    padding: 30px 30px 0 30px;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.movies-box {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 3px solid #292929;
+    cursor: pointer;
+}
+
+.movies-img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.movies-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movies-box .movies-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    width: 100%;
+    height: 54px;
+}
+
+.movies-box .movies-details a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    display: -webkit-box;
+    max-width: 90%;
+    -webkit-line-clamp: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3a3a3a;
+}
+
+.movies-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.2s;
+}
+
+#category {
+    background-color: #FFF;
+    border-top: 1px solid rgba(53, 53, 53, 0.1);
+    padding: 20px 0 0 0;
+}
+
+.category-heading {
+    padding-left: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+}
+
+.category-box {
+    width: 320px;
+    height: 180px;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 786px) {
     #banner .black h1 {
         top: 10%;
         font-size: 20px;
@@ -282,7 +397,7 @@ nav .navbar-toggler .nav-icon::after {
     }
 
     #banner .black .genre {
-        top: 5%;
+        top: 8%;
     } 
 
     #banner .black a.category {
@@ -308,7 +423,7 @@ nav .navbar-toggler .nav-icon::after {
     #banner .black .description {
         top: 10%;
         width: 60%;
-        font-size: 12px;
+        font-size: 8px;
         margin-right: 2.5%;
         white-space: nowrap;
         overflow: hidden;
@@ -317,7 +432,7 @@ nav .navbar-toggler .nav-icon::after {
     }
 
     #banner .black .genre {
-        top: 5%;
+        top: 10%;
     } 
 
     #banner .black a.category {
