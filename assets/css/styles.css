@@ -363,9 +363,10 @@ nav .navbar-toggler .nav-icon::after {
     height: 180px;
     box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    margin: 0 5px 10px 5px;
+    margin: 0 0 10px 20px;
     gap: 5px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .category-box img {
