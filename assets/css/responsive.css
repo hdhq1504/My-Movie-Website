@@ -1,0 +1,120 @@
+/* Responsive */
+@media (max-width: 1000px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    #banner .black h1 {
+        top: 8%;
+    }
+
+    #banner .black .star {
+        top: 8%;
+    }
+
+    #banner .black .description {
+        top: 8%;
+        max-width: 60%;
+        font-size: 16px;
+        margin-right: 5%;
+    }
+
+    #banner .black .genre {
+        top: 8%;
+    } 
+
+    #banner .black a.category {
+        font-size: 12px;
+    } 
+
+    #banner .black .watch {
+        top: 8%;
+    } 
+}
+
+@media (max-width: 786px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    #banner .black h1 {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    #banner .black .star {
+        top: 10%;
+        font-size: 12px;
+    }
+
+    #banner .black .description {
+        top: 10%;
+        width: 60%;
+        font-size: 12px;
+        margin-right: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #banner .black .genre {
+        top: 8%;
+    } 
+
+    #banner .black a.category {
+        font-size: 10px;
+    } 
+
+    #banner .black .watch {
+        top: 10%;
+    } 
+}
+
+@media (max-width: 480px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    .navbar-nav a::after {
+        border: none;
+    }
+
+    #banner .black h1 {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    #banner .black .star {
+        top: 10%;
+        font-size: 12px;
+    }
+    
+    #banner .black .description {
+        top: 10%;
+        width: 60%;
+        font-size: 8px;
+        margin-right: 2.5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    #banner .black .genre {
+        top: 10%;
+    } 
+
+    #banner .black a.category {
+        font-size: 10px;
+    } 
+
+    #banner .black .watch {
+        top: 10%;
+    } 
+}

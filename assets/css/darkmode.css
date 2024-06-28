@@ -1,0 +1,50 @@
+/* Dark mode styles */
+body.dark-mode {
+    background-color: rgb(45, 45, 45);
+    color: #ffffff;
+}
+
+body.dark-mode .showcase-heading, 
+body.dark-mode .latest-heading, 
+body.dark-mode .movies-heading, 
+body.dark-mode .category-heading {
+    color: #f9f6ee;
+}
+
+body.dark-mode .showcase-box, 
+body.dark-mode .latest-box, 
+body.dark-mode .movies-box, 
+body.dark-mode .category-box {
+    background-color: #1f1f1f;
+    color: #f9f6ee;
+}
+
+body.dark-mode nav {
+    background-color: rgba(23, 23, 23, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .movies-heading h2 {
+    border-top: 1px solid grey;
+}
+
+body.dark-mode #main,
+body.dark-mode #latest,
+body.dark-mode #category {
+    border-top: 1px solid grey;
+} 
+
+body.dark-mode #main,
+body.dark-mode #category {
+    background-color: rgb(45, 45, 45);
+}
+
+body.dark-mode .latest-b-text a,
+body.dark-mode .movies-box .movies-details a {
+    color: #f9f6ee;
+    font-weight: 600;
+}
+
+body.dark-mode .icons {
+    color: #ffffff;
+}
