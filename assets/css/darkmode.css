@@ -7,7 +7,8 @@ body.dark-mode {
 body.dark-mode .showcase-heading, 
 body.dark-mode .latest-heading, 
 body.dark-mode .movies-heading, 
-body.dark-mode .category-heading {
+body.dark-mode .category-heading,
+body.dark-mode .recently-heading {
     color: #f9f6ee;
 }
 
@@ -24,13 +25,24 @@ body.dark-mode nav {
     backdrop-filter: blur(10px);
 }
 
+body.dark-mode .nav-item .nav-link {
+    color: #f9f6ee;
+    font-weight: 500;
+}
+
+body.dark-mode .nav-item .nav-link:hover::after {
+    background-color: #3E5FB7;
+}
+
 body.dark-mode .movies-heading h2 {
     border-top: 1px solid grey;
 }
 
 body.dark-mode #main,
 body.dark-mode #latest,
-body.dark-mode #category {
+body.dark-mode #category,
+body.dark-mode #recently,
+body.dark-mode #footer {
     border-top: 1px solid grey;
 } 
 

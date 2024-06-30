@@ -17,7 +17,7 @@ nav {
     height: 35px;
 }
 
-.navbar-nav a {
+.navbar-nav .nav-link {
     position: relative;
     display: flex;
     height: 40px;
@@ -31,7 +31,7 @@ nav {
     letter-spacing: 1px;
 }
 
-.navbar-nav a::after {
+.navbar-nav .nav-link::after {
     position: absolute;
     content: "";
     width: 0;
@@ -42,7 +42,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.navbar-nav a:hover::after {
+.navbar-nav .nav-link:hover::after {
     width: 100%;
 }
 
@@ -188,7 +188,7 @@ nav .navbar-toggler .nav-icon::after {
     border-radius: 10px;
     margin: 0 20px 10px 20px;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .showcase-box img {
@@ -376,7 +376,186 @@ nav .navbar-toggler .nav-icon::after {
     object-fit: cover;
 }
 
-.footer {
+/* #recently {
+    border-top: 1px solid rgba(53, 53, 53, 0.1);
+    padding: 20px 0;
+}
+
+.recently-heading {
+    margin: 30px 30px 0 30px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.recently-box {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 215px;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: width 0.7s;
+}
+
+.recently-b-img {
+    width: 100%;
+    height: 380px;
+}
+
+.recently-b-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recently-b-text {
+    max-width: 98%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.recently-b-text a {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3a3a3a;
+    margin: 0;
+}
+
+.recently-b-text p {
+    color: #979797;
+    margin: 0;
+} */
+
+#recently {
+    border-top: 1px solid rgba(53, 53, 53, 0.1);
+}
+
+.recently-heading {
+    margin: 30px 30px 0 30px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 98%;
+    margin: 0 auto 20px auto;
+}
+
+.recently-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 15px 0 0;
+    transition: transform 0.5s ease;
+}
+
+.recently-box {
+    position: relative;
+    width: 200px;
+    height: 320px;
+    flex: 0 0 auto;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.recently-box .black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    border-radius: 10px;
+}
+
+.recently-box:hover .black {
+    display: block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.5));
+    transition: transform 0.5s ease;
+}
+
+.recently-box .black .ranking {
+    position: relative;
+    font-size: 24px;
+    background-color: #3E5FB7;
+    padding: 4px 15px;
+    color: #f9f6ee;
+    font-weight: 600;
+    top: 4%;
+    left: 90%;
+    border-radius: 50%;
+}
+
+.recently-box .black h4 {
+    position: relative; 
+    top: 55%;
+    margin-left: 4%;
+    color: #f9f6ee;
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+
+.recently-box .black .star {
+    position: relative;
+    top: 55%;
+    margin-left: 4%;
+    color: #FFE100;
+}
+
+.recently-box .black .details {
+    position: relative;
+    top: 55%;
+    margin-left: 4%;
+    color: #f9f6ee; 
+}
+
+.recently-box:hover {
+    width: 520px;
+    transition: width 0.7s;
+}
+
+.recently-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+#footer {
     border-top: 1px solid rgba(53, 53, 53, 0.1);
 }
 
@@ -384,4 +563,125 @@ nav .navbar-toggler .nav-icon::after {
     width: 24px;
     height: 24px;
     font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    #banner .black h1 {
+        top: 8%;
+    }
+
+    #banner .black .star {
+        top: 8%;
+    }
+
+    #banner .black .description {
+        top: 8%;
+        max-width: 60%;
+        font-size: 16px;
+        margin-right: 5%;
+    }
+
+    #banner .black .genre {
+        top: 8%;
+    } 
+
+    #banner .black a.category {
+        font-size: 12px;
+    } 
+
+    #banner .black .watch {
+        top: 8%;
+    } 
+}
+
+@media (max-width: 786px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    #banner .black h1 {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    #banner .black .star {
+        top: 10%;
+        font-size: 12px;
+    }
+
+    #banner .black .description {
+        top: 10%;
+        width: 60%;
+        font-size: 12px;
+        margin-right: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #banner .black .genre {
+        top: 8%;
+    } 
+
+    #banner .black a.category {
+        font-size: 10px;
+    } 
+
+    #banner .black .watch {
+        top: 10%;
+    } 
+}
+
+@media (max-width: 480px) {
+    .navbar-nav a:hover {
+        background-color: #282931;
+        color: #FFF;
+        border-bottom: none;
+    }
+
+    .navbar-nav a::after {
+        border: none;
+    }
+
+    #banner .black h1 {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    #banner .black .star {
+        top: 10%;
+        font-size: 12px;
+    }
+    
+    #banner .black .description {
+        top: 10%;
+        width: 60%;
+        font-size: 8px;
+        margin-right: 2.5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    #banner .black .genre {
+        top: 10%;
+    } 
+
+    #banner .black a.category {
+        font-size: 10px;
+    } 
+
+    #banner .black .watch {
+        top: 10%;
+    } 
 }
