@@ -378,7 +378,6 @@ nav .navbar-toggler .nav-icon::after {
 
 /* #recently {
     border-top: 1px solid rgba(53, 53, 53, 0.1);
-    padding: 20px 0;
 }
 
 .recently-heading {
@@ -386,79 +385,6 @@ nav .navbar-toggler .nav-icon::after {
     font-weight: 500;
     font-size: 1.3rem;
     color: #1a1a1a;
-}
-
-.recently-box {
-    display: flex;
-    flex-direction: row;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-    margin: 20px 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 215px;
-    background-color: #FFF;
-    cursor: pointer;
-    transition: width 0.7s;
-}
-
-.recently-b-img {
-    width: 100%;
-    height: 380px;
-}
-
-.recently-b-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.recently-b-text {
-    max-width: 98%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-}
-
-.recently-b-text a {
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    color: #3a3a3a;
-    margin: 0;
-}
-
-.recently-b-text p {
-    color: #979797;
-    margin: 0;
-} */
-
-#recently {
-    border-top: 1px solid rgba(53, 53, 53, 0.1);
-}
-
-.recently-heading {
-    margin: 30px 30px 0 30px;
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #1a1a1a;
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    max-width: 98%;
-    margin: 0 auto 20px auto;
-}
-
-.recently-list {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 15px 0 0;
-    transition: transform 0.5s ease;
 }
 
 .recently-box {
@@ -553,6 +479,66 @@ nav .navbar-toggler .nav-icon::after {
 
 .carousel-button.next {
     right: 10px;
+} */
+
+#recently {
+    border-top: 1px solid rgba(53, 53, 53, 0.1);
+}
+
+.recently-heading {
+    margin: 30px 30px 0 30px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.img-list {
+    display: flex;
+    margin: 10px auto 20px auto;
+}
+
+.img-item {
+    flex: 0 0 auto;
+    width: 220px;
+    height: 320px;
+    margin: 0 8px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: flex 0.5s ease, width 0.5s ease;
+}
+
+.img-item:hover {
+    flex: 1;
+    width: 550px;
+}
+
+.slide-button {
+    position: absolute;
+    color: #f9f6ee;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
 }
 
 #footer {

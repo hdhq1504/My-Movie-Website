@@ -1,31 +1,25 @@
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-const carousel = document.querySelector('.recently-list');
+const initSlider = () => {
+    const imageList = document.querySelector(".wrapper .img-list");
+    const slideButtons = document.querySelectorAll(".wrapper .slide-button");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-let scrollPosition = 0;
-
-nextButton.addEventListener('click', () => {
-    const itemWidth = document.querySelector('.recently-box').offsetWidth + 15; // Including margin
-    if (scrollPosition < (carousel.scrollWidth - carousel.clientWidth)) {
-        scrollPosition += itemWidth;
-        carousel.scroll({
-            left: scrollPosition,
-            behavior: 'smooth'
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth"});
         });
-    }
-});
+    });
 
-prevButton.addEventListener('click', () => {
-    const itemWidth = document.querySelector('.recently-box').offsetWidth + 15; // Including margin
-    if (scrollPosition > 0) {
-        scrollPosition -= itemWidth;
-        carousel.scroll({
-            left: scrollPosition,
-            behavior: 'smooth'
-        });
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
     }
-});
 
+    imageList.addEventListener("scroll", () => {
+        handleSlideButtons();
+    });
+}
 
 $(document).ready(function() {
     $('#autoWidth, #autoWidth2, #autoWidth3').lightSlider({
