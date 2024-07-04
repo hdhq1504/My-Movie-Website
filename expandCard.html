@@ -4,144 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
         .container {
-            max-width: 1200px;
-            width: 95%;
+            width: 90%;
+            margin: 0 auto;
         }
 
-        .slider-wrapper {
-            position: relative;
-        }
-
-        .slider-wrapper .img-list {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 18px;
-            font-size: 0;
+        .recently-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
             overflow-x: auto;
-            scrollbar-width: none;
-            margin-bottom: 30px;
         }
 
-        .slider-wrapper .img-list::-webkit-scrollbar {
-            display: none;
-        }
-
-        .slider-wrapper .img-list .img-item {
-            width: 250px;
+        .recently-items {
+            min-width: 200px;
             height: 350px;
+            margin-right: 10px;
             border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .recently-items img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
-        .slider-wrapper .img-list .img-item:hover {
-            width: 550px;
+        .recently-items:hover {
+            width: 500px;
             transition: width 0.7s;
-        }
-
-        .slide-button {
-            position: absolute;
-            top: 50%;
-            color: #000;
-            height: 30px;
-            width: 30px;
-            background: transparent;
-            font-size: 1rem;
-            border-radius: 50%;
-            border: 2px solid #000;
-            outline: none;
-            cursor: pointer;
-            transform: translateY(-50%);
-        }
-
-        .slide-button#prev {
-            display: none;
-            left: -20px;
-        }
-
-        .slide-button#next {
-            right: -20px;
-        }
-
-        @media (max-width: 480px) {
-            .slide-button {
-                display: none !important;
-            }
-
-            .img-list {
-                gap: 10px;
-                margin-bottom: 15px;
-            }
-
-            .slider-wrapper .img-list .img-item {
-                width: 250px;
-                height: 350px;
-                border-radius: 10px;
-                object-fit: cover;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="slider-wrapper">
-            <button id="prev" class="slide-button"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="img-list">
-                <img src="assets/images/recently-1.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-2.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-3.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-4.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-5.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-6.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-1.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-1.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-1.jpg" alt="" class="img-item">
-                <img src="assets/images/recently-1.jpg" alt="" class="img-item">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">Slide 01</li>
+                      <li class="splide__slide">Slide 02</li>
+                      <li class="splide__slide">Slide 03</li>
+                  </ul>
             </div>
-            <button id="next" class="slide-button"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+        </section>
     </div>
-
-    <script>
-        const initSlider = () => {
-            const imageList = document.querySelector(".img-list");
-            const slideButtons = document.querySelectorAll(".slide-button");
-            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-            slideButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    const direction = button.id === "prev" ? -1 : 1;
-                    const scrollAmount = imageList.clientWidth * direction;
-                    imageList.scrollBy({ left: scrollAmount, behavior: "smooth"});
-                });
-            });
-
-            const handleSlideButtons = () => {
-                slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
-                slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
-            }
-
-            imageList.addEventListener("scroll", () => {
-                handleSlideButtons();
-            });
-        }
-
-        window.addEventListener("load", initSlider);
-    </script>
 </body>
 </html>
