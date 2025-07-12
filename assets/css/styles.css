@@ -77,7 +77,7 @@ nav .navbar-toggler .nav-icon::before {
 }
 
 nav .navbar-toggler .nav-icon::after {
-    top: -5px;   
+    top: -5px;
 }
 
 .search {
@@ -115,7 +115,7 @@ nav .navbar-toggler .nav-icon::after {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.0), rgba(0,0,0,0.7));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7));
 }
 
 #banner .black h1 {
@@ -188,7 +188,7 @@ nav .navbar-toggler .nav-icon::after {
     border-radius: 10px;
     margin: 0 20px 10px 20px;
     overflow: hidden;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .showcase-box img {
@@ -388,7 +388,7 @@ nav .navbar-toggler .nav-icon::after {
 }
 
 .popular-box {
-    position: relative; 
+    position: relative;
     width: 550px;
     height: 320px;
     box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3);
@@ -402,7 +402,7 @@ nav .navbar-toggler .nav-icon::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.5));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
 }
 
 .popular-box .black .ranking {
@@ -487,15 +487,15 @@ nav .navbar-toggler .nav-icon::after {
 
     #banner .black .genre {
         top: 8%;
-    } 
+    }
 
     #banner .black a.category {
         font-size: 12px;
-    } 
+    }
 
     #banner .black .watch {
         top: 8%;
-    } 
+    }
 }
 
 @media (max-width: 786px) {
@@ -527,15 +527,15 @@ nav .navbar-toggler .nav-icon::after {
 
     #banner .black .genre {
         top: 8%;
-    } 
+    }
 
     #banner .black a.category {
         font-size: 10px;
-    } 
+    }
 
     #banner .black .watch {
         top: 10%;
-    } 
+    }
 }
 
 @media (max-width: 480px) {
@@ -558,7 +558,7 @@ nav .navbar-toggler .nav-icon::after {
         top: 10%;
         font-size: 12px;
     }
-    
+
     #banner .black .description {
         top: 10%;
         width: 60%;
@@ -572,13 +572,13 @@ nav .navbar-toggler .nav-icon::after {
 
     #banner .black .genre {
         top: 10%;
-    } 
+    }
 
     #banner .black a.category {
         font-size: 10px;
-    } 
+    }
 
     #banner .black .watch {
         top: 10%;
-    } 
+    }
 }
